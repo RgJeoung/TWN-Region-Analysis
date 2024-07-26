@@ -19,5 +19,21 @@ To run this code, you need the following three preset files.
 2. Topological Water Networks (TWN)
 3. Boundary File
 
+###### MD trajecoties
 We used GROMACS version 5.1.4 and the CHARMM27 forcefield to get MD trajecotries. And you just need to prepare it with the trajectory in the DATA directory.
 
+###### TWNs
+TWNs can be obtained by running the TWN_Extractor_v1.exe file.
+The input file must contain a_input in the upper PDB directory (for example, 1NVR in the trajectory directory) and must be entered in the format of "trajectory number.pdb" (for example, 0.pdb).
+
+For example:
+
+    TWN_Extractor_v1.exe -path ./DATA/trajectory/1NVR
+
+The output file is created as "a_output" in the same pdb directory by default. In detail, you can set the output directory name and whether to include duplicates of the upper ring ("True" by default which means include duplicates).
+
+For example:
+
+    TWN_Extractor_v1.exe -path ./DATA/trajectory/1NVR -opname "output directory name" -dup False
+
+###### Boundary file
