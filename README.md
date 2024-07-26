@@ -42,6 +42,7 @@ After the extraction process is completed, you must change the rfour directory c
 ###### Boundary file
 Boundary file can be obtained by running the Boundary_file_maker.py file.
 The input file must be same as the input of TWN_Extractor_v1.exe.
+
 For example:
 
     python boundary_file_maker.py -path ./DATA/trajectory/1NVR
@@ -59,6 +60,7 @@ After running the code, you can get three directories.
 1. TWN Pattern
 2. TWN Region
 3. logs
+
 TWN-Patterns indicate independent positions and shapes of water networks. And TWN-Regions are regions identified based on the high frequencies of water networks. Please see our paper if you wonder about output file meanings. Logs are logfile of TWN-Region-Analysis calculation.
 
 ## Contact (Questions/Bugs/Requests)
