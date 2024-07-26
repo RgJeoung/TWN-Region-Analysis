@@ -2,6 +2,8 @@
 Source code for TWN Region Analysis. 
 Anyone can test the TWN Region Analysis for fragment growing.
 
+![graphical_abs](https://github.com/user-attachments/assets/192b2b5a-c14c-4f3e-b017-0bf1de33308c)
+
 TWN region analysis is conducted through the following procedure.
 ## Installation
 This code was tested in windows with Python 3.9.
