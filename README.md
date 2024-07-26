@@ -1,7 +1,7 @@
 # TWN Region Analysis
 Source code for TWN Region Analysis. 
 
-
+![graphical_abs](https://github.com/user-attachments/assets/9774d4b7-f42c-4a8d-9b5a-66c04e61690e)
 
 TWN region analysis is conducted through the following procedure.
 ## Installation
