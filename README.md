@@ -35,5 +35,6 @@ The output file is created as "a_output" in the same pdb directory by default. I
 For example:
 
     TWN_Extractor_v1.exe -path ./DATA/trajectory/1NVR -opname "output directory name" -dup False
-
+    
+After the extraction process is completed, you must change the rfour directory created in the output directory to the "protein-name_pdb-code_ring-type" format to create a TWN directory like "CHK1_1NVR_R4" in the DATA/TWN directory.
 ###### Boundary file
