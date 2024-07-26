@@ -1,6 +1,5 @@
-# TWN-Region-Analysis
+# TWN Region Analysis
 Source code for TWN Region Analysis. 
-Anyone can test the TWN Region Analysis for fragment growing.
 
 ![graphical_abs](https://github.com/user-attachments/assets/192b2b5a-c14c-4f3e-b017-0bf1de33308c)
 
@@ -17,12 +16,12 @@ You can set up a virtual environment in conda as follows:
 
 ## Preset
 To run this code, you need the following three preset files.
-1. Molecular Dynamics (MD) simulation trajectories for target protein
-2. Topological Water Networks (TWN)
-3. Boundary File
+1. Molecular dynamics (MD) simulation trajectories for target protein
+2. Topological water networks (TWN)
+3. Boundary file
 
-###### MD trajecoties
-We used GROMACS version 5.1.4 and the CHARMM27 forcefield to get MD trajecotries. And you just need to prepare it with the trajectory in the DATA directory.
+###### MD trajectories
+We used GROMACS version 5.1.4 and the CHARMM27 forcefield to get MD trajecotries. For this analysis, you can use input files available in DATA directory or you can prepare your input files in similar way.
 
 ###### TWNs
 TWNs can be obtained by running the TWN_Extractor_v1.exe file.
@@ -32,7 +31,7 @@ For example:
 
     TWN_Extractor_v1.exe -path ./DATA/trajectory/1NVR
 
-The output file is created as "a_output" in the same pdb directory by default. In detail, you can set the output directory name and whether to include duplicates of the upper ring ("True" by default which means include duplicates).
+The output file is created as "a_output" in the same pdb directory by default. In detail, you can set the output directory name and whether to include duplicates of rings of larger size ("True" by default which means include duplicates).
 
 For example:
 
@@ -47,10 +46,10 @@ For example:
 
     python boundary_file_maker.py -path ./DATA/trajectory/1NVR
 
-You can choose options after type this at the prompt (for example, centering methods and sizes). After running you can get a ".bd" format file in the directory name of "boundary".
+You can choose options after typing this at the prompt (for example, centering methods and sizes). After running you can get a ".bd" format file in the directory name of "boundary".
 
-## Start TWN-Region-Analysis
-After finishing to prepare all required presets, you are ready to run the main code, "TWN-Region-Analysis.py". Please make sure to prepare all directories like the example "DATA".
+## Start TWN region analysis
+After preparing all required presets, you are ready to run the main code, "TWN-Region-Analysis.py". Please make sure to prepare all directories like the example "DATA".
 
 Script for running code is following:
 
@@ -61,7 +60,9 @@ After running the code, you can get three directories.
 2. TWN Region
 3. logs
 
-TWN-Patterns indicate independent positions and shapes of water networks. And TWN-Regions are regions identified based on the high frequencies of water networks. Please see our paper if you wonder about output file meanings. Logs are logfile of TWN-Region-Analysis calculation.
+TWN patterns indicate independent positions and shapes of water networks within protein binding pocket. TWN regions are identified based on the TWN patterns.
+
+For better understanding of output files, you can read our paper.
 
 ## Contact (Questions/Bugs/Requests)
 Questions : Please ask our professor <nskang@cnu.ac.kr>
